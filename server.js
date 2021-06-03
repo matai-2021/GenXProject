@@ -15,16 +15,14 @@ server.set('view engine', 'hbs')
 
 // Your routes/router(s) should go here
 
-
 // Game routes
 server.use('/game', gameRouter)
 
-
 // Root Route:
 server.get('/', (req, res) => {
-    res.send("Let's Play!")
+  const viewData = {}
+  const template = 'home'
+  res.render(template, viewData)
 })
-
-
 
 module.exports = server
