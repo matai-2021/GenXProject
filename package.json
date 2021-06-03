@@ -1,0 +1,37 @@
+{
+  "name": "genxproject",
+  "version": "0.1.0",
+  "description": "Guess the image game",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matai-2021/GenXProject.git"
+  },
+  "eslintConfig": {
+    "extends": "eda"
+  },
+  "keywords": [
+    "guess",
+    "image",
+    "game"
+  ],
+  "author": "Rodrigo, Peter, Kritika, Zac, West",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matai-2021/GenXProject/issues"
+  },
+  "homepage": "https://github.com/matai-2021/GenXProject#readme",
+  "devDependencies": {
+    "jest": "^27.0.3"
+  },
+  "dependencies": {
+    "eslint": "7.9.0",
+    "eslint-config-eda": "0.1.4",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2"
+  }
+}
