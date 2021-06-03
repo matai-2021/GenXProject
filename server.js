@@ -11,12 +11,20 @@ server.use(express.urlencoded({ extended: false }))
 
 // Handlebars configuration
 server.engine('hbs', hbs({ extname: 'hbs' }))
-
 server.set('view engine', 'hbs')
 
 // Your routes/router(s) should go here
 
-module.exports = server
 
 // Game routes
-server.use('/puppies', gameRoutes)
+server.use('/game', gameRouter)
+
+
+// Root Route:
+server.get('/', (req, res) => {
+    res.send("Let's Play!")
+})
+
+
+
+module.exports = server

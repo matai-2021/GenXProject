@@ -1,0 +1,24 @@
+
+
+
+{
+    "animalInDisguise":
+                        [
+                            {
+                                "id": 1,
+                                "imageDistorted": "/images/cow-distorted.png",
+                                "imageNormal": "/images/cow-normal.png",
+                                "correctAnswer": "cow",
+                                "choices": ["dog", "cow", "cat"]
+                            },
+                            {
+                                "id": 2,
+                                "imageDistorted": "/images/dog-distorted.png",
+                                "imageNormal": "/images/dog-normal.png",
+                                "correctAnswer": "dog",
+                                "choices": ["rabbit", "pig", "dog"]
+                            }
+                        ]
+
+
+}
