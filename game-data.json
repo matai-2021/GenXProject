@@ -1,0 +1,34 @@
+{
+  "animalInDisguise": [
+    {
+      "id": 1,
+      "backgroundImg": "/images/animal-fam.png",
+      "imageJumbled": "/images/cat-jumbled.png",
+      "imageNormal": "/images/cat.png",
+      "correctAnswer": "1. CAT",
+      "choice1": "1. CAT",
+      "choice2": "2. COW",
+      "choice3": "3. PIG"
+    },
+    {
+      "id": 2,
+      "backgroundImg": "/images/animal-fam.png",
+      "imageJumbled": "/images/dog-jumbled.png",
+      "imageNormal": "/images/dog.png",
+      "correctAnswer": "2. DOG",
+      "choice1": "1. FOX",
+      "choice2": "2. DOG",
+      "choice3": "3. CAT"
+    },
+    {
+      "id": 3,
+      "backgroundImg": "/images/animal-fam.png",
+      "imageJumbled": "/images/cow-jumbled.png",
+      "imageNormal": "/images/cow.png",
+      "correctAnswer": "2. COWS",
+      "choice1": "1. DOGS",
+      "choice2": "2. COWS",
+      "choice3": "3. BUFFALOS"
+    }
+  ]
+}
