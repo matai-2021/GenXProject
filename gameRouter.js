@@ -5,8 +5,8 @@ const { getGameData } = require('./utils.js')
 module.exports = router
 
 router.post('/:gamenum/guess', (req, res) => {
-  console.log('This is on the POST route!')
-  res.redirect('/game/2')
+  console.log(req.body.choice) // typeof shows as string
+  res.redirect(`/game/${req.params.gamenum}/correct`)
 })
 
 // This route will be used to display each of the three games. localhost:3000/game/2 will show the second game etc
