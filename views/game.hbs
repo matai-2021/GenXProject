@@ -10,19 +10,26 @@
      <h3>Which animal matches the image?</h3>
      <div class="form">
 
-      <form action="/game/{{id}}/guess" method="POST">
+
+      <form action="/game/{{id}}/correct" method="POST">
+
         <button class="btn">{{choice1}}</button>
         <input type="hidden" name="choice" value='1'>
       </form>
       
-      <form action="/game/{{id}}/guess" method="POST">
+
+      <form action="/game/{{id}}/correct" method="POST">
+
+
         <button class="btn">{{choice2}}</button>
-        <input type="text" name="choice" value='2'>
+         <input type="hidden" name="choice" value='2'>
       </form>
 
-      <form action="/game/{{id}}/guess" method="POST">
+
+      <form action="/game/{{id}}/correct" method="POST">
+
         <button class="btn">{{choice3}}</button>
-        <input type="text" name="choice" value='3'>
+         <input type="hidden" name="choice" value='3'>
       </form>   
      </div>
       
