@@ -1,4 +1,4 @@
-module.exports = { getGameData }
+module.exports = { getGameData, loadFirstGame }
 
 const path = require('path')
 const fs = require('fs')
@@ -25,4 +25,8 @@ function findSpecificGame (gamenum, gameDataObj) {
     return game.id === id
   })
   return game
+}
+
+function loadFirstGame () {
+  console.log('button clicked')
 }
