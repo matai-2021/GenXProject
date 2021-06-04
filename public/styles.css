@@ -40,6 +40,7 @@ h3 {
 }
 
 p {
+  padding:10px 0; 
   font-size: 30px;
   font-family: 'Courier New', Courier, monospace;
   color: rgb(28, 136, 61);
