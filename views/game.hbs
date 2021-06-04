@@ -1,0 +1,32 @@
+<main class="container card-container">
+ <section class="card">
+   <div class="animal-img">
+     <img class="img1" src={{imageJumbled}} alt={{correctAnswer}}>
+     <img class="img2" src={{imageNormal}} alt={{correctAnswer}}>
+   </div>
+ </section>
+ <section class="card">
+   <div class="choices">
+     <h3>Which animal matches the image?</h3>
+     <div class="form">
+
+      <form action="/{{id}}/guess" method="POST">
+        <button class="btn">{{choice1}}</button>
+        <input type="text" value="choice1">
+      </form>
+      
+      <form action="/{{id}}/guess" method="POST">
+        <button class="btn">{{choice2}}</button>
+        <input type="text" value="choice2">
+      </form>
+
+      <form action="/{{id}}/guess" method="POST">
+        <button class="btn">{{choice3}}</button>
+        <input type="text" value="choice3">
+      </form>   
+     </div>
+      
+   </div>
+ </section>
+</main>
+{{>nxt-btn}}
