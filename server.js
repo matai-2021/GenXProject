@@ -19,10 +19,8 @@ server.set('view engine', 'hbs')
 server.use('/game', gameRouter)
 
 // Root Route:
-server.get('/', (req, res) => {
-  const viewData = {}
-  const template = 'home'
-  res.render(template, viewData)
+server.get('/', (_, res) => {
+  res.render('home', {})
 })
 
 module.exports = server

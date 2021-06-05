@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
+    "dev": "nodemon index",
     "test": "jest --watchAll"
   },
   "repository": {
@@ -26,7 +27,8 @@
   },
   "homepage": "https://github.com/matai-2021/GenXProject#readme",
   "devDependencies": {
-    "jest": "^27.0.3"
+    "jest": "^27.0.3",
+    "nodemon": "^2.0.7"
   },
   "dependencies": {
     "eslint": "7.9.0",

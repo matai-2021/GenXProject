@@ -1,25 +1,33 @@
 const express = require('express')
+const util = require('util')
 const router = express.Router()
-const { getGameData } = require('./utils.js')
+const fs = require('fs')
+const readFile = util.promisify(fs.readFile)
+const path = require('path')
+const filePath = path.join(__dirname, 'game-data.json')
 
 module.exports = router
 
-router.post('/:gamenum/guess', (req, res) => {
-  console.log(req.body.choice) // typeof shows as string
-  res.redirect(`/game/${req.params.gamenum}/correct`)
+router.get('/correct/:id', async (req, res) => {
+  try {
+    const gameData = await readFile(filePath, 'utf8')
+    const gameDataObj = JSON.parse(gameData)
+    const game = gameDataObj.find(game => game.id.toString() === req.params.id)
+    const template = 'correct'
+    res.render(template, { image: game.imageNormal })
+  } catch (error) {
+    console.log(error)
+  }
 })
 
-// This route will be used to display each of the three games. localhost:3000/game/2 will show the second game etc
-router.get('/:gamenum', (req, res) => {
-  // const template = 'game'
-  getGameData(req.params.gamenum, (game) => {
-    console.log(game)
-
-    // Just to check we receive the right data:
-    // res.send(`Game: ${game.id}. Choices: ${game.choices[0]}, ${game.choices[1]} or ${game.choices[2]}. Correct answer: ${game.correctAnswer}`)
-
+router.get('/:id', async (req, res) => {
+  try {
+    const gameData = await readFile(filePath, 'utf8')
+    const gameDataObj = JSON.parse(gameData)
+    const game = gameDataObj.find(game => game.id.toString() === req.params.id)
     const template = 'game'
-    const viewData = { ...game }
-    res.render(template, viewData)
-  })
+    res.render(template, game)
+  } catch (error) {
+    console.log(error)
+  }
 })

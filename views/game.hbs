@@ -1,38 +1,16 @@
 <main class="container card-container">
  <section class="card">
    <div class="animal-img">
-     <img class="img1" src={{imageJumbled}} alt={{correctAnswer}}>
-     <img class="img2" src={{imageNormal}} alt={{correctAnswer}}>
+     <img class="img1" src={{imageJumbled}}>
+     {{!-- <img class="img1" src={{imageNormal}}> --}}
    </div>
  </section>
  <section class="card">
    <div class="choices">
      <h3>Which animal matches the image?</h3>
-     <div class="form">
-
-
-      <form action="/game/{{id}}/correct" method="POST">
-
-        <button class="btn">{{choice1}}</button>
-        <input type="hidden" name="choice" value='1'>
-      </form>
-      
-
-      <form action="/game/{{id}}/correct" method="POST">
-
-
-        <button class="btn">{{choice2}}</button>
-         <input type="hidden" name="choice" value='2'>
-      </form>
-
-
-      <form action="/game/{{id}}/correct" method="POST">
-
-        <button class="btn">{{choice3}}</button>
-         <input type="hidden" name="choice" value='3'>
-      </form>   
-     </div>
-      
+     {{#each choices}}
+        <a class="btn" href="/game/{{#if isCorrect}}correct{{else}}wrong{{/if}}/{{id}}">{{id}}. {{name}}</a>
+     {{/each}}
    </div>
  </section>
 </main>
