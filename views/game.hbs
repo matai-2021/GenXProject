@@ -2,16 +2,16 @@
  <section class="card">
    <div class="animal-img">
      <img class="img1" src={{imageJumbled}}>
-     {{!-- <img class="img1" src={{imageNormal}}> --}}
    </div>
  </section>
  <section class="card">
    <div class="choices">
      <h3>Which animal matches the image?</h3>
      {{#each choices}}
-        <a class="btn" href="/game/{{#if isCorrect}}correct{{else}}wrong{{/if}}/{{id}}">{{id}}. {{name}}</a>
+        <a class="btn" href="/game/{{#if isCorrect}}correct{{else}}wrong{{/if}}/{{../id}}">
+          {{id}}. {{name}}
+        </a>
      {{/each}}
    </div>
  </section>
 </main>
-{{>nxt-btn}}
